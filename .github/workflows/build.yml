@@ -3,11 +3,11 @@ name: Kernel Build
 on:
   workflow_dispatch:
     inputs:
-      repository: { description: 'Repo', required: true, default: 'HiroZukki/kernel_xiaomi_mt6768' }
+      repository: { description: 'Repo', required: true, default: 'YoshikawaYuuko/kernel_xiaomi_earth' }
       branch: { description: 'Branch', required: true, default: '-' }
       defconfig: { description: 'Defconfig', required: true, default: 'earth_defconfig' }
       zipname : { description: 'zip name', required: false, default: '-' }
-      clang : { description: 'Clang URL', required: true, default: 'https://github.com/AbuRider/scripts/releases/download/20260502/clang-r596125.tar.gz' }
+      clang : { description: 'Clang URL', required: true, default: '-' }
       kernelsu_branch: { description: 'KSU Branch', required: false, default: 'master' }
       kernelsu_setup : { description: 'KSU Setup Link', required: false, default: 'https://raw.githubusercontent.com/backslashxx/KernelSU/refs/heads/master/kernel/setup.sh' }
 
