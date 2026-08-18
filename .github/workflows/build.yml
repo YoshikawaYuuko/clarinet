@@ -7,7 +7,7 @@ on:
       branch: { description: 'Branch', required: true, default: '-' }
       defconfig: { description: 'Defconfig', required: true, default: 'earth_defconfig' }
       zipname : { description: 'zip name', required: false, default: '-' }
-      clang : { description: 'Clang URL', required: true, default: '-' }
+      clang : { description: 'Clang URL', required: true, default: 'https://github.com/YoshikawaYuuko/clarinet/releases/download/15544236/clang-r596125.tar.gz' }
       kernelsu_branch: { description: 'KSU Branch', required: false, default: 'master' }
       kernelsu_setup : { description: 'KSU Setup Link', required: false, default: 'https://raw.githubusercontent.com/backslashxx/KernelSU/refs/heads/master/kernel/setup.sh' }
 
