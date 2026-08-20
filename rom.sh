@@ -22,4 +22,5 @@ if [ -f out/target/product/earth/*202608*.zip ]; then
     echo "upload done!"
 else
     echo "no zip found at out/ dir..."
+    exit 1
 fi
