@@ -5,8 +5,8 @@
 # /opt/crave/resync.sh
 
 # device source
-rm -rf device/xiaomi/earth device/mediatek/sepolicy_vndr
-git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
+# rm -rf device/xiaomi/earth device/mediatek/sepolicy_vndr
+# git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
 # Setup build
 . build/envsetup.sh
@@ -17,7 +17,7 @@ export BUILD_HOSTNAME=crave
 
 # start build
 breakfast earth userdebug
-make installclean
+# make installclean
 m pixelos
 
 # Upload
