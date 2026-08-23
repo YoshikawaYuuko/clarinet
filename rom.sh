@@ -12,6 +12,7 @@
 . build/envsetup.sh
 
 export SOONG_NINJA=ninja
+export SOONG_INCREMENTAL_ANALYSIS=false
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
 
