@@ -1,12 +1,10 @@
 #!/bin/bash
 
 # init & sync
-# repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
-# /opt/crave/resync.sh
+repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
+/opt/crave/resync.sh
 
 # device source
-rm -rf device/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/mediatek hardware/xiaomi
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
 # Custom Source 
@@ -22,7 +20,6 @@ export BUILD_HOSTNAME=crave
 
 # start build
 breakfast earth userdebug
-make installclean
 m pixelos
 
 # Upload
