@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!--Remote-->
+  <remote name="Yuuko" fetch="https://github.com/YoshikawaYuuko" />
+
+  <!-- Device Source -->  
+  <project path="device/xiaomi/earth" name="android_device_xiaomi_earth" revision="PixelOS-17" remote="Yuuko" clone-depth="1" />  
+
+</manifest>
