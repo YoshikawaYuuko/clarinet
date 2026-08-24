@@ -1,15 +1,16 @@
 #!/bin/bash
 
 # init & sync
-repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
-/opt/crave/resync.sh
+# repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
+# /opt/crave/resync.sh
 
 # device source
+rm -rf kernel/xiaomi/earth
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
 # Custom Source 
-rm -rf build/soong
-git clone https://github.com/YoshikawaYuuko/android_build_soong.git -b seventeen build/soong
+# rm -rf build/soong
+# git clone https://github.com/YoshikawaYuuko/android_build_soong.git -b seventeen build/soong
 
 # Setup build
 . build/envsetup.sh
