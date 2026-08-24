@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # remove depis source
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr
+rm -rf device/xiaomi/earth # kernel/xiaomi/earth vendor/xiaomi/earth
+rm -rf out/target/product/earth # same with installclean
 
 # init & sync
 repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
@@ -24,6 +24,7 @@ export BUILD_HOSTNAME=crave
 
 # start build
 breakfast earth userdebug
+make installclean 
 m pixelos
 
 # Upload
