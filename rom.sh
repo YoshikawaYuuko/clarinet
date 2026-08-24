@@ -5,7 +5,7 @@
 # /opt/crave/resync.sh
 
 # device source
-rm -rf device/xiaomi/earth kernel/xiaomi/earth
+rm -rf device/xiaomi/earth
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
 # Custom Source 
@@ -21,6 +21,7 @@ export BUILD_HOSTNAME=crave
 
 # start build
 breakfast earth userdebug
+make installclean
 m pixelos
 
 # Upload
