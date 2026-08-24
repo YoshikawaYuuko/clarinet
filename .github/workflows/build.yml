@@ -3,8 +3,8 @@ name: Kernel Build
 on:
   workflow_dispatch:
     inputs:
-      repository: { description: 'Repo', required: true, default: 'YoshikawaYuuko/kernel_xiaomi_mt6768' }
-      branch: { description: 'Branch', required: true, default: '-' }
+      repository: { description: 'Repo', required: true, default: 'YoshikawaYuuko/kernel_xiaomi_earth' }
+      branch: { description: 'Branch', required: true, default: 'ksu-testing' }
       defconfig: { description: 'Defconfig', required: true, default: 'earth_defconfig' }
       zipname : { description: 'zip name', required: false, default: '-' }
       clang : { description: 'Clang URL', required: true, default: 'https://github.com/YoshikawaYuuko/clarinet/releases/download/15241605/clang-r596125.tar.gz' }
@@ -15,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    #  - name: Cleanup
-    #   uses: rokibhasansagar/slimhub_actions@main
+    - name: Cleanup
+      uses: rokibhasansagar/slimhub_actions@main
       
     - uses: actions/checkout@v5
       with:
