@@ -15,7 +15,8 @@ export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
 
 # start build
-breakfast earth userdebug  
+lunch custom_earth-cp2a-userdebug
+make installclean
 m pixelos
 
 # Upload
