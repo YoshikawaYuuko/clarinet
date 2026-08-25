@@ -7,14 +7,11 @@ repo init -u https://github.com/VoltageOS/manifest.git -b 17 --git-lfs --depth=1
 # device source
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b Voltage-17 device/xiaomi/earth
 
-# Setup build
-. build/envsetup.sh
-
-export SOONG_NINJA=ninja
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
 
-# start build
+# Setup build
+. build/envsetup.sh
 brunch earth userdebug  
 
 # Upload
