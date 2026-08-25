@@ -12,11 +12,13 @@ git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b P
 . build/envsetup.sh
 
 export SOONG_NINJA=ninja
+export GOGC=15
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
 
 # start build
 breakfast earth userdebug 
+make installclean 
 m pixelos
 
 # Upload
