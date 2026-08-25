@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # init & sync
-repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
+# repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
 
 # device source
-git clone https://github.com/YoshikawaYuuko/clarinet.git -b pixelos .repo/local_manifests
+# git clone https://github.com/YoshikawaYuuko/clarinet.git -b pixelos .repo/local_manifests
 
-/opt/crave/resync.sh
+# /opt/crave/resync.sh
 
 # Setup build
 . build/envsetup.sh
