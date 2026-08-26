@@ -18,7 +18,7 @@ export BUILD_HOSTNAME=crave
 
 # Setup build
 . build/envsetup.sh
-lunch lineage_earth-bp4a-user
+lunch lineage_earth-bp4a-userdebug
 make installclean 
 mka bacon
 
