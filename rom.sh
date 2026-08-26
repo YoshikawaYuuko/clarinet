@@ -1,26 +1,28 @@
 #!/bin/bash
 
 # init & sync
-# repo init -u https://github.com/Lunaris-AOSP/android.git -b 16.2 --git-lfs --depth=1
+# repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
 # /opt/crave/resync.sh
 
 # device source
-rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth vendor/mediatek/ims
+rm -rf device/xiaomi/earth
 rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
-git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
+git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
-# custom personal source
-# rm -rf vendor/lineage
-# git clone https://github.com/HiroZukki/vendor_lineage.git -b 16.2 vendor/lineage
-
-export BUILD_USERNAME=yuuko
-export BUILD_HOSTNAME=crave
+# custom source
+rm -rf build/soong
+git clone https://github.com/YoshikawaYuuko/android_build_soong.git -b seventeen build/soong
 
 # Setup build
 . build/envsetup.sh
-lunch lineage_earth-bp4a-userdebug
-make installclean 
-mka bacon
+
+export SOONG_NINJA=ninja
+export BUILD_USERNAME=yuuko
+export BUILD_HOSTNAME=crave
+
+# start build
+breakfast earth userdebug
+m pixelos
 
 # Upload
 echo "upload to gofile..."
