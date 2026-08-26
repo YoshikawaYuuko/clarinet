@@ -5,7 +5,8 @@
 # /opt/crave/resync.sh
 
 # device source
-rm -rf device/xiaomi/earth
+rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth vendor/mediatek/ims
+rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 # custom personal source
@@ -18,6 +19,7 @@ export BUILD_HOSTNAME=crave
 # Setup build
 . build/envsetup.sh
 lunch lineage_earth-bp4a-user
+make installclean 
 mka bacon
 
 # Upload
