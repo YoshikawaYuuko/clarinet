@@ -1,22 +1,23 @@
 #!/bin/bash
 
 # init & sync
-# repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
-# /opt/crave/resync.sh
+repo init -u https://github.com/Lunaris-AOSP/android.git -b 16.2 --git-lfs --depth=1
+/opt/crave/resync.sh
 
 # device source
-# git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
+git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
-# Setup build
-. build/envsetup.sh
+# custom personal source
+rm -rf vendor/lineage
+git clone https://github.com/HiroZukki/vendor_lineage.git -b 16.2 vendor/lineage
 
-export SOONG_NINJA=ninja
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
 
-# start build
-lunch custom_earth-cp2a-userdebug
-m pixelos
+# Setup build
+. build/envsetup.sh
+lunch lineage_earth-bp4a-user
+mka bacon
 
 # Upload
 echo "upload to gofile..."
