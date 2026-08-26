@@ -1,15 +1,16 @@
 #!/bin/bash
 
 # init & sync
-repo init -u https://github.com/Lunaris-AOSP/android.git -b 16.2 --git-lfs --depth=1
-/opt/crave/resync.sh
+# repo init -u https://github.com/Lunaris-AOSP/android.git -b 16.2 --git-lfs --depth=1
+# /opt/crave/resync.sh
 
 # device source
+rm -rf device/xiaomi/earth
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 # custom personal source
-rm -rf vendor/lineage
-git clone https://github.com/HiroZukki/vendor_lineage.git -b 16.2 vendor/lineage
+# rm -rf vendor/lineage
+# git clone https://github.com/HiroZukki/vendor_lineage.git -b 16.2 vendor/lineage
 
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
