@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# init & sync
-# repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
-# /opt/crave/resync.sh
-
-# device source
 rm -rf device/xiaomi/earth
 rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
+
+# init & sync
+repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
+/opt/crave/resync.sh
+
+# device source
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
 # custom source
