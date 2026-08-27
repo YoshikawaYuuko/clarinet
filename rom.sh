@@ -1,18 +1,18 @@
 #!/bin/bash
 
-rm -rf device/xiaomi/earth
-rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
+rm -rf device/xiaomi/earth kernel/xiaomi/earth
+# rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
 
 # init & sync
-repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
-/opt/crave/resync.sh
+# repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs --depth=1
+# /opt/crave/resync.sh
 
 # device source
 git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
 
 # custom source
-rm -rf build/soong
-git clone https://github.com/YoshikawaYuuko/android_build_soong.git -b seventeen build/soong
+# rm -rf build/soong
+# git clone https://github.com/YoshikawaYuuko/android_build_soong.git -b seventeen build/soong
 
 # Setup build
 . build/envsetup.sh
@@ -23,6 +23,7 @@ export BUILD_HOSTNAME=crave
 
 # start build
 breakfast earth userdebug
+maks installclean 
 m pixelos
 
 # Upload
