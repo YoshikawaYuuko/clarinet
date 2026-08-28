@@ -8,7 +8,7 @@ rm -rf device/xiaomi/earth vendor/xiaomi/earth
 # /opt/crave/resync.sh
 
 # device source
-git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17 device/xiaomi/earth
+git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b PixelOS-17-ims device/xiaomi/earth
 
 # custom source
 # rm -rf build/soong
