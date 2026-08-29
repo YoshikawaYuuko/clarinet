@@ -26,7 +26,7 @@ m pixelos
 echo "upload to gofile..."
 if [ -f out/target/product/earth/*202608*.zip ]; then
     wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-    chmod +x upload.sh ; ./upload.sh out/target/product/earth/*.zip
+    chmod +x upload.sh ; ./upload.sh out/target/product/earth/PixelOS_*.zip
     echo "upload done!"
 else
     echo "no zip found at out/ dir..."
