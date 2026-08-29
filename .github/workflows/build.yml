@@ -61,7 +61,6 @@ jobs:
           cd Anykernel3
           zip -r9 "../Anykernel3-${{ github.event.inputs.zipname }}-${{ env.BUILD_TIME }}-earth.zip" * -x '.git*'
         fi
-        mv -f out/.config out/config
 
     - name: Upload Artifacts
       if: always()
@@ -69,5 +68,6 @@ jobs:
       with:
         name: Build-Result-${{ env.BUILD_TIME }}
         path: |
+          *.zip
           *.log
-          out/config
+          out/.config
