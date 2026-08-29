@@ -5,7 +5,11 @@ repo init -u https://github.com/VoltageOS/manifest.git -b 17 --git-lfs --depth=1
 /opt/crave/resync.sh
 
 # device source
-git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b Voltage-17 device/xiaomi/earth
+git clone https://github.com/dreamsolister26/android_device_xiaomi_earth.git -b Voltage-17 device/xiaomi/earth
+
+# Custom Build Soong
+rm -rf build/soong
+git clone https://github.com/dreamsolister26/build_soong_voltage.git -b 17 build/soong
 
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
