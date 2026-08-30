@@ -14,8 +14,8 @@ git clone https://github.com/YoshikawaYuuko/android_device_xiaomi_earth.git -b P
 . build/envsetup.sh
 
 export SOONG_NINJA=ninja
-export BUILD_USERNAME=yuuko
-export BUILD_HOSTNAME=crave
+export BUILD_USERNAME=kumiko
+export BUILD_HOSTNAME=kitauji_quartet
 
 # start build
 breakfast earth userdebug
