@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth vendor/lineage-priv/keys
+rm -rf device/xiaomi/earth kernel/xiaomi/earth # vendor/xiaomi/earth vendor/lineage-priv/keys
 rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
 
 # init & sync
