@@ -7,11 +7,14 @@ repo init -u https://github.com/sweet-bullet/voltage_manifest.git -b 17 --git-lf
 # device source
 git clone https://github.com/dreamsolister26/android_device_xiaomi_earth.git -b Voltage-17 device/xiaomi/earth
 
-export BUILD_USERNAME=yuuko
-export BUILD_HOSTNAME=crave
-
 # Setup build
 . build/envsetup.sh
+
+export BUILD_USERNAME=yuuko
+export BUILD_HOSTNAME=crave
+export SOONG_NINJA=ninja
+
+# start build
 brunch earth userdebug  
 
 # Upload
