@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # init & sync
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs --no-clone-bundle --depth=1
+repo init -u https://github.com/sweet-bullet/voltage_manifest.git -b 17 --git-lfs --depth=1
 /opt/crave/resync.sh
 
 # device source
-git clone https://github.com/dreamsolister26/android_device_xiaomi_earth.git -b crDroid-15 device/xiaomi/earth
+git clone https://github.com/dreamsolister26/android_device_xiaomi_earth.git -b Voltage-17 device/xiaomi/earth
 
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
