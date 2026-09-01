@@ -7,14 +7,11 @@ repo init -u https://github.com/sweet-bullet/ascp_platform_manifest.git -b 17 --
 # device source
 git clone https://github.com/dreamsolister26/android_device_xiaomi_earth.git -b ascp-17 device/xiaomi/earth
 
-# Setup build
-. build/envsetup.sh
-
 export BUILD_USERNAME=yuuko
 export BUILD_HOSTNAME=crave
-export SOONG_NINJA=ninja
 
-# start build
+# Setup build
+. build/envsetup.sh
 lunch earth-cp2a-userdebug
 mka bacon
 
