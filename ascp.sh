@@ -17,7 +17,7 @@ mka bacon
 
 # Upload
 echo "upload to gofile..."
-if [ -f out/target/product/earth/*202608*.zip ]; then
+if [ -f out/target/product/earth/*202609*.zip ]; then
     wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
     chmod +x upload.sh ; ./upload.sh out/target/product/earth/*.zip
     echo "upload done!"
