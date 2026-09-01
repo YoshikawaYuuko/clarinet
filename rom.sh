@@ -15,8 +15,7 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
 # start build
-breakfast earth userdebug
-make installclean 
+breakfast earth userdebug 
 m pixelos
 
 # Upload
